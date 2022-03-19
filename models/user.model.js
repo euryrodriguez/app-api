@@ -3,9 +3,12 @@ module.exports = (mongoose) =>{
         "usuarios",
         mongoose.Schema(
             {
-                _id: String,
                 createdDate: Date,
-                email: String,
+                email: {
+                    type: String,
+                    match: /.+\@.+\..+/,
+                    unique:true
+                },
                 firstName: String,
                 lastName: String,
                 password: String,
