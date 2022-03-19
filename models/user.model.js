@@ -1,4 +1,4 @@
-module.exports = () =>{
+module.exports = (mongoose) =>{
     const User = mongoose.model(
         "usuarios",
         mongoose.Schema(
